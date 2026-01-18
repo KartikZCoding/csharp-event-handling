@@ -8,7 +8,7 @@ namespace EventHandling
     //{
     //    public Video Video { get; set; }
     //}
-    public class VideoEncoder 
+    public class VideoEncoder
     {
         // 1. Define a delegate
         //public delegate void VideoEncoderEventHandler(object source, VideoEventArgs args);
@@ -23,18 +23,19 @@ namespace EventHandling
             Console.WriteLine($"Video {video.Title} encoding...!");
             Thread.Sleep(3000);
 
-            //OnVideoEncoded(video);
-            OnVideoEncoded();
+            // OnVideoEncoded(video);
+            // OnVideoEncoded();
+            VideoEncoded?.Invoke(this, EventArgs.Empty);
         }
 
         // 3. Raise the event
-        protected virtual void OnVideoEncoded() // OnVideoEncoded(Video video)
-        {
-            if(VideoEncoded != null)
-            {
-                VideoEncoded(this, EventArgs.Empty);
-                //VideoEncoded(this, new VideoEventArgs() { Video = video });
-            }
-        }
+        // protected virtual void OnVideoEncoded() // OnVideoEncoded(Video video)
+        // {
+        //     if(VideoEncoded != null)
+        //     {
+        //         VideoEncoded(this, EventArgs.Empty);
+        //         //VideoEncoded(this, new VideoEventArgs() { Video = video });
+        //     }
+        // }
     }
 }
