@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="EventHandlerListUses/EventHandlerListUses.csproj" Id="2480a9f8-8517-4254-ba4d-463b9d94336b" />
   <Project Path="EventHandling/EventHandling.csproj" />
   <Project Path="TemperatureEventHandling/TemperatureEventHandling.csproj" Id="bf01efc9-7dc3-4a82-890d-d22abb601eb4" />
 </Solution>
